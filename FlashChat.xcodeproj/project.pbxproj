@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6606CF4321D427BF8E3F1420 /* Pods_FlashChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713D667CCEF33C29A6823B22 /* Pods_FlashChat.framework */; };
 		8F0B6E0528CF0C69007DCD4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B6E0428CF0C69007DCD4E /* AppDelegate.swift */; };
 		8F0B6E0728CF0C69007DCD4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B6E0628CF0C69007DCD4E /* SceneDelegate.swift */; };
 		8F0B6E0C28CF0C69007DCD4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0B6E0A28CF0C69007DCD4E /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		713D667CCEF33C29A6823B22 /* Pods_FlashChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0B6E0128CF0C69007DCD4E /* FlashChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0B6E0428CF0C69007DCD4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F0B6E0628CF0C69007DCD4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		8F0B6E1E28CF3556007DCD4E /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8F0B6E1F28CF3556007DCD4E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8F0B6E2028CF3556007DCD4E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AF0ED95960C2C553BE5125D3 /* Pods-FlashChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.release.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.release.xcconfig"; sourceTree = "<group>"; };
+		DD90B74087943AEE35CBEB02 /* Pods-FlashChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.debug.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6606CF4321D427BF8E3F1420 /* Pods_FlashChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CBBF1E334BD14FC73194AE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				713D667CCEF33C29A6823B22 /* Pods_FlashChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F0B6DF828CF0C69007DCD4E = {
 			isa = PBXGroup;
 			children = (
 				8F0B6E0328CF0C69007DCD4E /* FlashChat */,
 				8F0B6E0228CF0C69007DCD4E /* Products */,
+				E5701CC188B82EE28EAAADD3 /* Pods */,
+				2CBBF1E334BD14FC73194AE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +115,16 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		E5701CC188B82EE28EAAADD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD90B74087943AEE35CBEB02 /* Pods-FlashChat.debug.xcconfig */,
+				AF0ED95960C2C553BE5125D3 /* Pods-FlashChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F0B6E1528CF0C6A007DCD4E /* Build configuration list for PBXNativeTarget "FlashChat" */;
 			buildPhases = (
+				B0C394A8715742A3EFEA69B3 /* [CP] Check Pods Manifest.lock */,
 				8F0B6DFD28CF0C69007DCD4E /* Sources */,
 				8F0B6DFE28CF0C69007DCD4E /* Frameworks */,
 				8F0B6DFF28CF0C69007DCD4E /* Resources */,
+				0A0AD45F3E2DC9AA2D67306B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A0AD45F3E2DC9AA2D67306B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashChat/Pods-FlashChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashChat/Pods-FlashChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlashChat/Pods-FlashChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C394A8715742A3EFEA69B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlashChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F0B6DFD28CF0C69007DCD4E /* Sources */ = {
@@ -318,6 +387,7 @@
 		};
 		8F0B6E1628CF0C6A007DCD4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD90B74087943AEE35CBEB02 /* Pods-FlashChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +416,7 @@
 		};
 		8F0B6E1728CF0C6A007DCD4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF0ED95960C2C553BE5125D3 /* Pods-FlashChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
