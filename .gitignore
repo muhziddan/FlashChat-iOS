@@ -147,4 +147,7 @@ xcuserdata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+# API
+FlashChat/GoogleService-Info.plist
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,swiftpackagemanager,swiftpm,macos,cocoapods,xcode
