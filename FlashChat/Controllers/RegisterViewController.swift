@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let e = error {
-                print(e)
+                print(e.localizedDescription)
                 return
             } else {
                 self.performSegue(withIdentifier: "RegisterToChatVC", sender: self)
