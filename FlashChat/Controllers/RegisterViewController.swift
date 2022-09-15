@@ -20,7 +20,7 @@ class RegisterViewController: UIViewController {
                 print(e.localizedDescription)
                 return
             } else {
-                self.performSegue(withIdentifier: "RegisterToChatVC", sender: self)
+                self.performSegue(withIdentifier: Constants.Segue.registerToChat, sender: self)
             }
         }
     }

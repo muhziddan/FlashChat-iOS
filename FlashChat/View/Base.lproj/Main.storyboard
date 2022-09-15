@@ -169,7 +169,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="Kdc-HF-pD4" id="kQl-PS-fbI"/>
                         <outlet property="passwordTextfield" destination="3wP-cY-1Uc" id="pXM-8M-01W"/>
-                        <segue destination="voZ-jU-2wW" kind="show" id="XzS-Ca-Ggq"/>
+                        <segue destination="voZ-jU-2wW" kind="show" identifier="RegisterToChatVC" id="XzS-Ca-Ggq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZj-Ui-YEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -343,7 +343,13 @@
                             <constraint firstItem="WbD-Pf-dm4" firstAttribute="leading" secondItem="WF7-If-tv6" secondAttribute="leading" id="kFe-Gg-dg5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iQC-W0-DA2"/>
+                    <navigationItem key="navigationItem" id="iQC-W0-DA2">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="LOt-JR-BQh">
+                            <connections>
+                                <action selector="logOutPressed:" destination="voZ-jU-2wW" id="oKt-as-TIq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextfield" destination="Ll5-Rc-p3C" id="L3r-lm-UDu"/>
                         <outlet property="tableView" destination="WbD-Pf-dm4" id="YCN-6o-UAh"/>
@@ -376,7 +382,7 @@
         <designable name="tg4-0a-bC7"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="bBx-zB-rx4"/>
+        <segue reference="XzS-Ca-Ggq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>

@@ -17,6 +17,7 @@
 		8F0B6E2228CF3556007DCD4E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B6E1E28CF3556007DCD4E /* WelcomeViewController.swift */; };
 		8F0B6E2328CF3556007DCD4E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B6E1F28CF3556007DCD4E /* ChatViewController.swift */; };
 		8F0B6E2428CF3556007DCD4E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B6E2028CF3556007DCD4E /* RegisterViewController.swift */; };
+		8F33BC4B28D32AC80053A839 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33BC4A28D32AC80053A839 /* Constants.swift */; };
 		8F48E0B428D161C3000C1E62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F48E0B328D161C3000C1E62 /* GoogleService-Info.plist */; };
 		8F6D286F28D157E200DBE004 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6D286E28D157E200DBE004 /* FirebaseAuth */; };
 		8F6D287128D157E200DBE004 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6D287028D157E200DBE004 /* FirebaseFirestore */; };
@@ -35,6 +36,7 @@
 		8F0B6E1E28CF3556007DCD4E /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8F0B6E1F28CF3556007DCD4E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8F0B6E2028CF3556007DCD4E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8F33BC4A28D32AC80053A839 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F48E0B328D161C3000C1E62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF0ED95960C2C553BE5125D3 /* Pods-FlashChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.release.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.release.xcconfig"; sourceTree = "<group>"; };
 		DD90B74087943AEE35CBEB02 /* Pods-FlashChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.debug.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				8F0B6E0F28CF0C6A007DCD4E /* LaunchScreen.storyboard */,
 				8F0B6E1228CF0C6A007DCD4E /* Info.plist */,
 				8F48E0B328D161C3000C1E62 /* GoogleService-Info.plist */,
+				8F33BC4A28D32AC80053A839 /* Constants.swift */,
 			);
 			path = FlashChat;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				8F0B6E2228CF3556007DCD4E /* WelcomeViewController.swift in Sources */,
 				8F0B6E0528CF0C69007DCD4E /* AppDelegate.swift in Sources */,
 				8F0B6E2428CF3556007DCD4E /* RegisterViewController.swift in Sources */,
+				8F33BC4B28D32AC80053A839 /* Constants.swift in Sources */,
 				8F0B6E2328CF3556007DCD4E /* ChatViewController.swift in Sources */,
 				8F0B6E0728CF0C69007DCD4E /* SceneDelegate.swift in Sources */,
 			);
