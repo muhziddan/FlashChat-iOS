@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lax-HR-ela">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lax-HR-ela">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -89,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHt-Fl-bCo" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Gc2-hq-Tzc">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -114,7 +115,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmt-xE-RtX" userLabel="PasswordView">
-                                <rect key="frame" x="0.0" y="165" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="169" width="414" height="177"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sq-k2-pmf">
                                         <rect key="frame" x="0.0" y="126" width="414" height="51"/>
@@ -124,7 +125,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="cYF-0K-Fts" eventType="touchUpInside" id="ajH-by-LNE"/>
-                                            <segue destination="voZ-jU-2wW" kind="show" identifier="RegisterToChatVC" id="MXn-zx-2vb"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Hok-NI-TwV">
@@ -169,6 +169,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="Kdc-HF-pD4" id="kQl-PS-fbI"/>
                         <outlet property="passwordTextfield" destination="3wP-cY-1Uc" id="pXM-8M-01W"/>
+                        <segue destination="voZ-jU-2wW" kind="show" id="XzS-Ca-Ggq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZj-Ui-YEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -184,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEj-yW-Zj4" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="mWz-su-yae">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -209,7 +210,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxX-0u-1gQ" userLabel="PasswordView">
-                                <rect key="frame" x="0.0" y="165" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="169" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="ldl-Dh-790">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -228,7 +229,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginPressed:" destination="FA8-YG-h7c" eventType="touchUpInside" id="4au-f0-tz5"/>
-                                            <segue destination="voZ-jU-2wW" kind="show" identifier="LoginToChatVC" id="5HJ-Do-Qxx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -264,6 +264,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="GGf-Jk-GJ6" id="Y0g-Iq-gWa"/>
                         <outlet property="passwordTextfield" destination="LDl-Tx-gG5" id="VNa-c0-QWh"/>
+                        <segue destination="voZ-jU-2wW" kind="show" identifier="LoginToChatVC" id="bBx-zB-rx4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whj-eg-9fN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -279,11 +280,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WbD-Pf-dm4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="710"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="7mj-6b-6x3">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7mj-6b-6x3" id="w09-am-d2m">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -358,7 +359,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lax-HR-ela" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Y0-Ua-oIw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -371,11 +372,14 @@
             <point key="canvasLocation" x="-86.956521739130437" y="134.59821428571428"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="tg4-0a-bC7"/>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="MXn-zx-2vb"/>
+        <segue reference="bBx-zB-rx4"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
