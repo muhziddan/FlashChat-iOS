@@ -13,11 +13,7 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages: [MessageModel] = [
-        MessageModel(sender: "1@2.com", body: "Hey"),
-        MessageModel(sender: "a@b.com", body: "Hello"),
-        MessageModel(sender: "1@2.com", body: "How is life")
-    ]
+    var messages: [MessageModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +23,33 @@ class ChatViewController: UIViewController {
 
         title = Constants.applicationName
         navigationItem.hidesBackButton = true
+        
+        loadMessages()
+        
+    }
+    
+    func loadMessages() {
+        
+        messages = []
+        
+        db.collection(Constants.FStore.collectionName).getDocuments { querySnapshot, error in
+            if let err = error {
+                print(err.localizedDescription)
+            } else {
+                guard let snapshotDocuments = querySnapshot?.documents else {return}
+                for doc in snapshotDocuments {
+                    let data = doc.data()
+                    guard let sender = data[Constants.FStore.senderField] as? String, let message = data[Constants.FStore.bodyField] as? String else {return}
+                    
+                    let newMessage = MessageModel(sender: sender, body: message)
+                    self.messages.append(newMessage)
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -38,7 +61,7 @@ class ChatViewController: UIViewController {
             Constants.FStore.bodyField: messageBody
         ]) { error in
             if let e = error {
-                print(e)
+                print(e.localizedDescription)
             }
         }
     }
@@ -51,7 +74,7 @@ class ChatViewController: UIViewController {
             try firebaseAuth.signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError  {
-            print(signOutError)
+            print(signOutError.localizedDescription)
         }
     }
     
