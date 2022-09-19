@@ -21,6 +21,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.register(UINib(nibName: Constants.TableView.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.TableView.cellIdentifier)
 
         title = Constants.applicationName
         navigationItem.hidesBackButton = true
@@ -52,14 +53,17 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableView.cellIdentifier, for: indexPath)
-        cell.selectionStyle = .none
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableView.cellIdentifier, for: indexPath) as! MessageCell
+        cell.messageLabel.text = messages[indexPath.row].body
         
-        var cellContent = cell.defaultContentConfiguration()
-        cellContent.text = messages[0].body
-        cellContent.secondaryText = messages[0].sender
-        
-        cell.contentConfiguration = cellContent
+        // use this code below when you are not editing the .xib or .storyboard file
+//        cell.selectionStyle = .none
+//
+//        var cellContent = cell.defaultContentConfiguration()
+//        cellContent.text = messages[0].body
+//        cellContent.secondaryText = messages[0].sender
+//
+//        cell.contentConfiguration = cellContent
         return cell
     }
     

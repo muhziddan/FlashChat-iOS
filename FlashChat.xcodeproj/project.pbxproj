@@ -20,6 +20,8 @@
 		8F33BC4B28D32AC80053A839 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33BC4A28D32AC80053A839 /* Constants.swift */; };
 		8F33BC4D28D3587F0053A839 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33BC4C28D3587F0053A839 /* MessageModel.swift */; };
 		8F48E0B428D161C3000C1E62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F48E0B328D161C3000C1E62 /* GoogleService-Info.plist */; };
+		8F640E5E28D840E700BF3287 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F640E5C28D840E700BF3287 /* MessageCell.swift */; };
+		8F640E5F28D840E700BF3287 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F640E5D28D840E700BF3287 /* MessageCell.xib */; };
 		8F6D286F28D157E200DBE004 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6D286E28D157E200DBE004 /* FirebaseAuth */; };
 		8F6D287128D157E200DBE004 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6D287028D157E200DBE004 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		8F33BC4A28D32AC80053A839 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F33BC4C28D3587F0053A839 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		8F48E0B328D161C3000C1E62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F640E5C28D840E700BF3287 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		8F640E5D28D840E700BF3287 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		AF0ED95960C2C553BE5125D3 /* Pods-FlashChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.release.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.release.xcconfig"; sourceTree = "<group>"; };
 		DD90B74087943AEE35CBEB02 /* Pods-FlashChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.debug.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				8F0B6E0A28CF0C69007DCD4E /* Main.storyboard */,
+				8F640E5C28D840E700BF3287 /* MessageCell.swift */,
+				8F640E5D28D840E700BF3287 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F640E5F28D840E700BF3287 /* MessageCell.xib in Resources */,
 				8F0B6E1128CF0C6A007DCD4E /* LaunchScreen.storyboard in Resources */,
 				8F48E0B428D161C3000C1E62 /* GoogleService-Info.plist in Resources */,
 				8F0B6E0E28CF0C6A007DCD4E /* Assets.xcassets in Resources */,
@@ -268,6 +275,7 @@
 				8F33BC4B28D32AC80053A839 /* Constants.swift in Sources */,
 				8F0B6E2328CF3556007DCD4E /* ChatViewController.swift in Sources */,
 				8F0B6E0728CF0C69007DCD4E /* SceneDelegate.swift in Sources */,
+				8F640E5E28D840E700BF3287 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
