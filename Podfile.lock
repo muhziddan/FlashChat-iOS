@@ -1,16 +1,20 @@
 PODS:
   - CLTypingLabel (0.4.0)
+  - IQKeyboardManagerSwift (6.5.10)
 
 DEPENDENCIES:
   - CLTypingLabel (~> 0.4.0)
+  - IQKeyboardManagerSwift
 
 SPEC REPOS:
   trunk:
     - CLTypingLabel
+    - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
   CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
 
-PODFILE CHECKSUM: 39c516c40f19f4ac8250c97b0db7e9fc26210298
+PODFILE CHECKSUM: 377f949942cc0282a0d8804c70c8db6b25fc9d9c
 
 COCOAPODS: 1.11.3
