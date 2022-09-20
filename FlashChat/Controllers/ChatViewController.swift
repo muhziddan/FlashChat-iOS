@@ -47,6 +47,8 @@ class ChatViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                     }
                 }
             }
@@ -66,6 +68,8 @@ class ChatViewController: UIViewController {
                 print(e.localizedDescription)
             }
         }
+        
+        messageTextfield.text = ""
     }
     
 
@@ -91,8 +95,23 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let currentMessage = messages[indexPath.row]
+        guard let currentUser = Auth.auth().currentUser?.email else {return UITableViewCell()}
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableView.cellIdentifier, for: indexPath) as! MessageCell
         cell.messageLabel.text = messages[indexPath.row].body
+        
+        if currentMessage.sender == currentUser {
+            cell.otherProfilePictureImageView.isHidden = true
+            cell.profilePictureImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.purple)
+        } else {
+            cell.otherProfilePictureImageView.isHidden = false
+            cell.profilePictureImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.purple)
+            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.lightPurple)
+        }
         
         // use this code below when you are not editing the .xib or .storyboard file
 //        cell.selectionStyle = .none
